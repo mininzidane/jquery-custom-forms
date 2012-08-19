@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Test page</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="js/jquery.custom.forms/css/custom.forms.css" />
+    <script type="text/javascript" src="js/jquery.1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.custom.forms/jquery.custom.forms.js"></script>
+</head>
+
+<body>
+
+<div class="content">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input:radio").customize({
+                changeStatusCallback:function (elem, clone, status) {
+                    console.log(status);
+                    elem.addClass("imdone");
+                    clone.css({
+                        background:"blue"
+                    })
+                }
+            });
+            $("input:checkbox").customize({
+                changeStatusCallback:function (elem, clone, status) {
+                    console.log(status);
+                }
+            });
+            $("select:first").customize({
+                initCallback:function (elem, c) {
+                    c.css({
+                        background:"red"
+                    })
+                }
+            });
+            $("input:radio, input:checkbox, select").customize();
+        });
+    </script>
+    <div class="radios">
+        <label for="radio1">radio 1</label>
+        <input type="radio" name="radio-test" id="radio1" />
+        <label for="radio2">radio 2</label>
+        <input type="radio" name="radio-test" id="radio2" />
+        <label for="radio3">radio 3</label>
+        <input type="radio" name="radio-test" id="radio3" />
+        <label for="radio4">radio 4</label>
+        <input type="radio" name="radio-test" id="radio4" />
+        <label for="radio5">radio 2-1</label>
+        <input type="radio" name="radio-test2" id="radio5" />
+        <label for="radio6">radio 2-2</label>
+        <input type="radio" name="radio-test2" id="radio6" />
+    </div>
+    <div class="select">
+        <select name="select" id="select">
+            <option value="0">...</option>
+            <option value="1">opt #1</option>
+            <option value="2">opt #2</option>
+            <option value="3">opt #3</option>
+            <option value="4">opt #4</option>
+        </select>
+        <select name="select2" id="select2">
+            <option value="5">...</option>
+            <option value="6">opt #6</option>
+            <option value="7">opt #7</option>
+            <option value="8">opt #8</option>
+            <option value="9">opt #9</option>
+        </select>
+        <select name="select3" id="select3">
+            <option value="10">...</option>
+            <option value="11">opt #11</option>
+            <option value="12">opt #12</option>
+            <option value="13">opt #13</option>
+            <option value="14">opt #14</option>
+        </select>
+    </div>
+    <div class="checkbox">
+        <label for="checkbox1">checkbox 1</label>
+        <input type="checkbox" name="checkbox1" id="checkbox1" />
+        <label for="checkbox2">checkbox 2</label>
+        <input type="checkbox" name="checkbox2" id="checkbox2" />
+        <label for="checkbox3">checkbox 3</label>
+        <input type="checkbox" name="checkbox3" id="checkbox3" />
+        <label for="checkbox4">checkbox 4</label>
+        <input type="checkbox" name="checkbox4" id="checkbox4" />
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
