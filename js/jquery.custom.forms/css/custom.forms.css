@@ -1,0 +1,84 @@
+
+.select-holder {
+    cursor: pointer;
+    border: 1px #444 solid;
+    background: #f8f8f8;
+    border-radius: 10px;
+    width: 80px;
+    overflow: hidden;
+    height: 1%;
+}
+
+.select-toggle {
+    width: 20px;
+    float: left;
+    height: 18px;
+}
+
+.select-selected {
+    float: left;
+    width: 59px;
+}
+
+.select-holder, .select-options {
+    width: 80px;
+}
+
+.select-options {
+    clear: both;
+    position: absolute;
+    margin-top: 18px;
+    background: #f8f8f8;
+    border-bottom: 1px #444 solid;
+    border-left: 1px #444 solid;
+    border-right: 1px #444 solid;
+    margin-left: -1px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.select-options a {
+    display: block;
+    padding-left: 20px;
+}
+
+.select-options a:hover {
+    background: #39B1DD;
+}
+
+.select-options a {
+    text-decoration: none;
+}
+
+.customized-checkbox label,
+.customized-radio label {
+    display: inline-block;
+    padding-left: 25px;
+    height: 20px;
+    //zoom: 1;
+}
+
+.customized-checkbox label {
+    background: url(../images/checkbox-off.jpg) no-repeat;
+}
+
+.customized-checkbox .checkbox-on {
+    background: url(../images/checkbox-on.jpg) no-repeat;
+}
+
+.customized-radio label {
+    background: url(../images/radio-off.jpg) no-repeat;
+}
+
+.customized-radio .radio-on {
+    background: url(../images/radio-on.jpg) no-repeat;
+}
+
+.customized-select {
+    margin: 5px 0;
+}
+
+.select-holder-open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
